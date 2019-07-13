@@ -16,6 +16,11 @@ app.post('/addUser', (req,res) => {
 
     todo.save().then((doc)=>{
         console.log('saved');
+        res.send({
+            "status code" : 1,
+            "status message" : "saved successfully"
+        }
+            );
     });
 });
 
